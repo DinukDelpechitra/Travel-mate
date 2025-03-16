@@ -7,6 +7,7 @@ router.get("/test", (req, res) => res.send("Package route is working"));
 
 // Add a new package
 router.post("/", (req, res) => {
+    console.log(req.body); // Log the incoming package data to check if it’s received correctly
     Package.create(req.body) // ✅ Use correct model name
         .then(() => res.json({ msg: "Package added successfully" }))
         .catch(() => res.status(400).json({ msg: "Failed to add package" }));
