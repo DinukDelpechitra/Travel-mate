@@ -22,8 +22,13 @@ const DisplayPackage = () => {
       }
     };
 
-    fetchCardData();
-  }, []);
+    fetchCardData(); // Fetch data initially
+
+    const intervalId = setInterval(fetchCardData, 30000); // Fetch data every 30 seconds
+
+    // Clean up the interval on component unmount
+    return () => clearInterval(intervalId);
+  }, []); // Empty dependency array ensures this runs once when the component mounts
 
   const handleBookClick = (card) => {
     navigate('/packagedetails', { state: { card } });
@@ -55,7 +60,6 @@ const DisplayPackage = () => {
             <h2>{card.name}</h2>
             <p className="card-price">Price: Rs{card.price}</p>
             <p className="card-location">Location: {card.location}</p>
-            {/*<p className="card-description">Description: {card.description}</p> */}
             <p className="card-duration">Duration: {card.duration}</p> {/* Display duration */}
             <button className="book-button" onClick={() => handleBookClick(card)}>View</button>
           </div>

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/tourpackage/admin/Home";
 import DisplayPackage from "./components/tourpackage/customer/Displaypackage";
 import TravelManagement from "./components/tourpackage/admin/Travelmanagement";
+import Navbar from "./components/tourpackage/customer/Navbar";
 
 import "./App.css";
 
@@ -10,6 +11,7 @@ function App() {
   return (
     <Router>
       <div>
+      <Navbar />
         <Routes>
           <Route path="/" element={<DisplayPackage />} />
 
