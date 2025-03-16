@@ -1,3 +1,4 @@
+// src/components/DisplayPackage.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -5,7 +6,7 @@ import './DisplayPackage.css';
 
 const DisplayPackage = () => {
   const [cardData, setCardData] = useState([]);
-  const [searchQuery, setSearchQuery] = useState(''); 
+  const [searchQuery, setSearchQuery] = useState('');
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -48,7 +49,7 @@ const DisplayPackage = () => {
           type="text"
           placeholder="Search by package name or location"
           value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)} 
+          onChange={(e) => setSearchQuery(e.target.value)}
           className="search-input"
         />
       </div>
@@ -60,7 +61,7 @@ const DisplayPackage = () => {
             <h2>{card.name}</h2>
             <p className="card-price">Price: Rs{card.price}</p>
             <p className="card-location">Location: {card.location}</p>
-            <p className="card-duration">Duration: {card.duration}</p> {/* Display duration */}
+            <p className="card-duration">Duration: {card.duration}</p>
             <button className="book-button" onClick={() => handleBookClick(card)}>View</button>
           </div>
         ))}

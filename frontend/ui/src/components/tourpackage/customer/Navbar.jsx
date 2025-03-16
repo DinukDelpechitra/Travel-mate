@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-
+// import logo from "../../assets/logo.png";
 const Navbar = () => {
   return (
     <nav
@@ -47,19 +47,8 @@ const Navbar = () => {
           <Link to="/hotel">Hotels</Link>
         </li>
         <li>
-          <Link to="/">Packagers</Link>
-        </li>{" "}
-        <li>
-          <Link to="/vehicles">Vehicles</Link>
+          <Link to="/firstpage">Packagers</Link>
         </li>
-        <li>
-          <Link to="/viewgear">Camping Gear</Link>
-        </li>
-        
-        <li>
-          <Link to="http://localhost:3000/events">Events</Link>
-        </li>
-        
         <li>
           <Link to="/feedback/user">Feedback</Link>
         </li>

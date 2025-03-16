@@ -4,6 +4,10 @@ import Home from "./components/tourpackage/admin/Home";
 import DisplayPackage from "./components/tourpackage/customer/Displaypackage";
 import TravelManagement from "./components/tourpackage/admin/Travelmanagement";
 import Navbar from "./components/tourpackage/customer/Navbar";
+import PackageDetails from "./components/tourpackage/customer/PackageDetails";
+import FrontPage from "./components/tourpackage/customer/FrontPage";
+
+
 
 import "./App.css";
 
@@ -13,7 +17,10 @@ function App() {
       <div>
       <Navbar />
         <Routes>
-          <Route path="/" element={<DisplayPackage />} />
+          <Route path="/packages" element={<DisplayPackage />} />
+          <Route path="/firstpage" element={<FrontPage />} />
+          <Route path="/packagedetails" element={<PackageDetails/>} />
+          
 
 
 
