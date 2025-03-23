@@ -6,9 +6,7 @@ import TravelManagement from "./components/tourpackage/admin/Travelmanagement";
 import Navbar from "./components/tourpackage/customer/Navbar";
 import PackageDetails from "./components/tourpackage/customer/PackageDetails";
 import FrontPage from "./components/tourpackage/customer/FrontPage";
-
-
-
+import Bill from "./components/tourpackage/customer/bill";
 import "./App.css";
 
 function App() {
@@ -17,9 +15,10 @@ function App() {
       <div>
       <Navbar />
         <Routes>
-          <Route path="/packages" element={<DisplayPackage />} />
           <Route path="/firstpage" element={<FrontPage />} />
+          <Route path="/packages" element={<DisplayPackage />} />
           <Route path="/packagedetails" element={<PackageDetails/>} />
+          <Route path="/bill" element={<Bill/>} />
           
 
 
